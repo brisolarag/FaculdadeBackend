@@ -1,0 +1,22 @@
+services:
+  faculdade-sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "MSSQL_SA_PASSWORD=Davi%2002"
+      - "MSSQL_PID=Evaluation"
+    volumes:
+      - "volume-sqlserver:/var/opt/mssql"
+    ports:
+      - 1433:1433
+
+
+
+volumes:
+  volume-sqlserver:
+    
+
+
+
+# String de conexao usando Docker:
+# Server=localhost,1433;Database=db_faculdade;User Id=sa;Password=Davi%2002;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True
